@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about MAAY DEVELOPERS, a professional web development team specializing in responsive, creative, and SEO-friendly websites.">
+    <meta name="keywords" content="About MAAY DEVELOPERS, Web Development Team, Professional Website Builders, Responsive Web Design, SEO Services">
+    <meta name="author" content="MAAY DEVELOPERS Team">
+    <meta property="og:title" content="About MAAY DEVELOPERS">
+    <meta property="og:description" content="Learn more about MAAY DEVELOPERS, a professional web development team specializing in responsive, creative, and SEO-friendly websites.">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <link rel="icon" type="image/png" href="images/maay2.jpg">
+    <meta property="og:type" content="website">
+    <title>About MAAY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Bungee+Spice&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Bungee+Spice&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* الوسائط المتجاوبة */
+/* For screens smaller than 576px (Extra Small Devices) */
+@media (max-width: 575.98px) {
+    body {
+        font-size: 14px; /* Reduce font size for better readability */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center;
+    }
+
+    .container {
+        grid-template-columns: 1fr; /* Make cards stack vertically */
+        gap: 1rem;
+    }
+
+    h2 {
+        font-size: 3rem; /* Adjust heading size for small screens */
+    }
+
+    #about p {
+        font-size: 18px; /* Reduce paragraph font size */
+        line-height: 1.4;
+        word-spacing: 2px;
+        letter-spacing: 0.1px;
+    }
+}
+
+/* For screens between 576px and 768px (Small Devices) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Arrange cards in two columns */
+        gap: 1.5rem;
+    }
+
+    h2 {
+        font-size: 4rem; /* Slightly larger heading size */
+    }
+
+    #about p {
+        font-size: 20px; /* Increase paragraph font size */
+        word-spacing: 2px;
+        letter-spacing: 0.1px;
+    }
+
+    #about p[dir="rtl"] {
+        font-size: 16px;
+        word-spacing: 2px;
+        letter-spacing: 0.1px;
+    }
+}
+
+/* For screens between 768px and 992px (Medium Devices) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr); /* Arrange cards in three columns */
+        gap: 2rem;
+    }
+
+    h2 {
+        font-size: 5rem; /* Larger heading size */
+    }
+
+    #about p {
+        font-size: 22px; /* Standard paragraph font size */
+        word-spacing: 2px;
+        letter-spacing: 0.1px;
+    }
+}
+
+/* For screens larger than 992px (Large Devices) */
+@media (min-width: 992px) {
+    .container {
+        grid-template-columns: repeat(4, 1fr); /* Arrange cards in four columns */
+        gap: 2.5rem;
+    }
+
+    h2 {
+        font-size: 6rem; /* Largest heading size */
+    }
+
+    #about p {
+        font-size: 24px; /* Larger paragraph font size */
+        word-spacing: 2px;
+        letter-spacing: 0.1px;
+    }
+}
+
+/* For phones in landscape mode */
+@media (max-width: 575.98px) and (orientation: landscape) {
+    .container {
+        grid-template-columns: repeat(2, 1fr); /* Arrange cards in two columns */
+    }
+
+    h2 {
+        font-size: 4rem; /* Adjust heading size */
+    }
+}
+
+/* For tablets in landscape mode */
+@media (min-width: 768px) and (max-width: 991.98px) and (orientation: landscape) {
+    .container {
+        grid-template-columns: repeat(3, 1fr); /* Arrange cards in three columns */
+    }
+
+    h2 {
+        font-size: 5rem; /* Adjust heading size */
+    }
+}
+
+/* تنسيق عام للصفحة */
+html {
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    font-size: 16px; /* Base font size for better scaling */
+    scrollbar-width: thin;
+    scrollbar-color: #ff5722 #1e1e1e;
+}
+
+/* General scrollbar styling */
+::-webkit-scrollbar {
+    width: 10px; /* Adjust the width of the scrollbar */
+}
+
+/* Track (المسار) */
+::-webkit-scrollbar-track {
+    background: #1e1e1e; /* Dark background color for the track */
+    border-radius: 5px; /* Rounded corners for the track */
+}
+
+/* Thumb (الجزء القابل للتمرير) */
+::-webkit-scrollbar-thumb {
+    background: #ff5722; /* Orange color for the thumb */
+    border-radius: 5px; /* Rounded corners for the thumb */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+/* Hover effect on thumb */
+::-webkit-scrollbar-thumb:hover {
+    background: #e64a19; /* Darker orange on hover */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: black; /* Solid black navbar */
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff5722 !important;
+    animation: shine 2s infinite alternate;
+}
+
+@keyframes shine {
+    from {
+        text-shadow: 0 0 5px #ff5722, 0 0 10px #ff8a50;
+    }
+    to {
+        text-shadow: 0 0 10px #ff5722, 0 0 20px #ff8a50;
+    }
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: #ff5722 !important;
+}
+
+.custom-btn {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.custom-btn:hover {
+    background-color: #e64a19; /* Darker shade on hover*/
+}
+
+/* Progress Bar Styles */
+.Indicator {
+    position: fixed; /* لتثبيت الشريط في أعلى الصفحة */
+    top: 0;
+    left: 0;
+    width: 0; /* البداية بعرض صفر */
+    height: 5px; /* سمك الشريط */
+    background-color: #ff5722; /* اللون البرتقالي */
+    z-index: 9999; /* ليكون فوق جميع العناصر الأخرى */
+    transition: width 0.3s ease-in-out;
+    display: block !important; /* ليظهر الشريط دائمًا */
+    opacity: 1 !important; /* لتجنب أي إخفاء غير مقصود */
+    padding-bottom: 10px;
+}
+
+h2{
+    font-family: "Bebas Neue", serif;
+    font-weight: 900;
+    font-size: 60px;
+    background: linear-gradient(80deg, #ff5722, #ffffff, #ff5722);
+    background-size: 30%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glow 8s linear infinite;
+}
+
+/* تعريف الـ Animation */
+@keyframes glow {
+    0% {
+        background-position: -100% 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* General styles for the about section */
+#about {
+    margin-top: 80px;
+    padding: 40px;
+}
+
+/* Paragraph styles */
+#about p {
+    font-family: "Comic Neue", serif;
+    font-weight: 700;
+    font-size: 20px;
+    max-width: 70%; /* Make sure paragraphs don't overflow */
+    margin: 0 auto;
+    line-height: 1.6;
+    text-align: justify;
+    word-break: break-word; /* Prevent long words from overflowing */
+    overflow-wrap: break-word; /* Break long words into multiple lines */
+    transition: font-size 0.3s ease-in-out, word-spacing 0.3s ease-in-out,
+                letter-spacing 0.3s ease-in-out;
+    word-spacing: 2px;
+    letter-spacing: 0.1px;
+}
+
+#about p[dir="rtl"] {
+    text-align: justify; /* Distribute words evenly */
+    text-wrap: balance; /* Balance text across lines */
+    hyphens: auto; /* Automatically break long words */
+    line-height: 1.6; /* Adjust line height for readability */
+    word-break: keep-all; /* Prevent breaking words unnecessarily */
+    word-spacing: 2px;
+    letter-spacing: 0.1px;
+}
+
+/* Span styles */
+#about span {
+    display: block; /* ليجعل <span> يتصرف كعنصر بلوك */
+    margin-top: 20px; /* فاصل بين النصوص السابقة والـ span */
+    font-size: 16px; /* حجم الخط المناسب للشاشات الصغيرة */
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1.5; /* تحسين التباعد بين السطور */
+    word-break: break-word; /* لكسر الكلمات الطويلة */
+    overflow-wrap: break-word; /* لتقطيع النصوص الطويلة */
+    max-width: 100%; /* ضمان إن العنصر مش يتجاوز حدود الأبو */
+}
+
+[dir="rtl"] #about span {
+    left: auto;
+    right: 18%;
+    font-family: "Tajawal", sans-serif;
+    font-weight: 400;
+    font-style:italic;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #about h2 {
+        font-size: 4rem; /* Reduce heading size for tablets */
+        margin-top: 5px; 
+    }
+
+    #about p {
+        font-size: 18px; /* Reduce paragraph font size for tablets */
+        line-height: 1.4;
+        word-spacing: 2px;
+        letter-spacing: 0.1px;
+    }
+
+    #about p[dir="rtl"] {
+        font-size: 16px; /* Smaller font size for better fit */
+        word-spacing: 2px; /* Reduce space between words */
+        letter-spacing: 0.1px; /* Reduce space between letters */
+    }
+
+    #about span {
+        font-size: 16px; /* تقليل حجم الخط للشاشات الصغيرة */
+        margin-top: 10px; /* تقليل المسافة فوق الـ span */
+    }
+}
+
+@media (max-width: 576px) {
+    #about h2 {
+        font-size: 3rem; /* Reduce heading size for phones */
+        margin-top: 5px; 
+    }
+
+    #about p {
+        font-size: 20px; /* Reduce paragraph font size for phones */
+        line-height: 1.3;
+        word-spacing: 2px;
+        letter-spacing: 0.1px;
+    }
+
+    #about span {
+        font-size: 14px; /* تقليل إضافي للشاشات صغيرة جدًا */
+        margin-top: 5px; /* تقليل المسافة بشكل أكبر */
+    }
+}
+
+    /* Styles for very small screens (phones) */
+    @media (max-width: 360px) {
+        #about p[dir="rtl"] {
+            font-size: 14px; /* Smaller font size for better fit */
+            word-spacing: 2px; /* Reduce space between words */
+            letter-spacing: 0.1px; /* Reduce space between letters */
+            line-height: 1.4; /* Tighter line height for smaller screens */
+        }
+    }
+
+    /* Card begian */
+    :root{
+    /* color mode */
+    --first-color: hsl(29, 80%, 58%);
+    --first-color-light: hsl(29, 80%, 70%);
+    --black-color: hsl(29, 16%, 10%);
+    --text-color: hsl(29, 8%, 65%);
+    /* Font */
+    --h3-font-size: 1.125rem;
+    --smaller-font-size: 1rem;
+    }
+    a{
+    text-decoration: none;
+    }
+    ul{
+    list-style: none;
+    }
+    img{
+    max-width: 100%;
+    height: auto;
+    }
+    /* تنسيق الكروت */
+    .container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1440px;
+    margin: 0 auto;
+    }
+
+    .card {
+    position: relative;
+    background-color: var(--black-color);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 16px hsla(29, 75%, 8%, 0.2);
+    transition: transform 0.3s ease;
+    break-inside: avoid;
+    margin: 10px;
+    direction: ltr !important;
+    text-align: center !important;
+    }
+
+    .card:hover {
+    transform: translateY(-5px);
+    }
+
+    /* الوسائط المتجاوبة */
+    @media (max-width: 1440px) {
+    .container {
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    gap: 1.5rem;
+    }
+    }
+    @media (max-width: 1200px) {
+    .container {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    }
+    }
+    @media (max-width: 992px) {
+    .container {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: 2rem;
+    }
+    }
+    @media (max-width: 768px) {
+    .container {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    gap: 1.5rem;
+    }
+    }
+    /* باقي التنسيقات الأصلية تبقى كما هي */
+    .card_img {
+        width: 100%;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--first-color);
+        margin: 0 auto 1rem;
+        }
+        .card_border {
+        width: 190px;
+        height: 190px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        margin: 0 auto 1rem;
+        }
+        .Card_Name{
+        color: var(--first-color);
+        font-size: var(--h3-font-size);
+        font-weight: 500;
+        }
+        .card_Field{
+        color: var(--text-color);
+        font-size: var(--smaller-font-size);
+        font-weight: 500;
+        margin-bottom: 20px;
+        }
+        .card_social{
+        width: 200px;
+        background-color: var(--first-color);
+        padding: .75rem;
+        border-radius: 3rem;
+        text-align: initial;
+        box-shadow: 0 8px 24px hsla(29, 75%, 56%, 0.3);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -1.75rem;
+        margin: 0 auto;
+        overflow: hidden;
+        transform-origin: 18px 17px;
+        }
+        .card_social_control{
+        position: relative;
+        transform-origin: 18px 18px;
+        transition: transform .45s ease;
+        transform: rotate(0);
+        }
+        .card_social_button{
+        display: inline-flex;
+        background-color: var(--black-color);
+        color: var(--first-color);
+        font-size: 1.25rem;
+        padding: .5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+        z-index: 10;
+        }
+        .card_social_text{
+        display: block;
+        color: var(--black-color);
+        font-size: var(--smaller-font-size);
+        font-weight: 500;
+        }
+
+        .social{
+        display: inline-flex;
+        column-gap: .75rem;
+        transform: rotate(135deg);
+        transform-origin: 18px 17px;
+        }
+        
+        .Social_link{
+        display: inline-flex;
+        background-color: var(--first-color-light);
+        color: var(--black-color);
+        font-size: 1.25rem;
+        padding: 6px;
+        border-radius: 50%;
+        }
+
+        .card_social_text,
+        .social{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding-left: 4rem;
+        }
+
+        .card_social_text{
+        top: .5rem;
+        }
+        
+        /* The rotate Animatiom of social card */
+        .animation .card_social_control{
+        transform: rotate(-135deg);
+        }
+
+        /* up animation */
+        .card_social.animation{
+        animation: up-animation 1s ease-in-out forwards;
+        }
+        @keyframes up-animation {
+        0%, 100%{
+        transform: rotate(0);
+        }
+        50%, 60%{
+        transform: rotate(-3deg);
+        }
+        88%{
+        transform: rotate(1deg);
+        }
+        }
+
+        /* down animation */
+        .card_social.down-animation{
+        animation: down-animation 1s ease-in-out forwards;
+        }
+        @keyframes down-animation {
+        0%, 100%{
+        transform: rotate(0);
+        }
+        50%, 60%{
+        transform: rotate(6deg);
+        }
+        88%{
+        transform: rotate(-1deg);
+        }
+        }
+
+    /* General Footer Styles */
+    footer .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items horizontally */
+        justify-content: center; /* Center items vertically */
+        text-align: center; /* Center text */
+    }
+
+    /* Section 1: Company Name and Tagline */
+    footer h3 {
+        font-size: 1.5rem;
+        color: #ff5722; /* Orange color for the company name */
+    }
+
+    footer p[data-translate="footerTagline"] {
+        font-size: 1rem;
+    }
+
+    /* Section 2: Social Media Icons */
+    .social-icons a {
+        color: #ff5722; /* Orange color for icons */
+        font-size: 1.5rem;
+    }
+
+    .social-icons a:hover {
+        color: white; /* Change icon color to white on hover */
+    }
+
+    .social-icons i {
+        margin: 0 10px; /*Add spacing between icons */
+    }
+
+    /* Section 3: Copyright */
+    footer p[data-translate="copyright"] {
+        font-size: 0.9rem;
+    }
+    </style>
+</head>
+<body>
+    <!-- Brogress Bar -->
+    <div class="Indicator"></div>
+    <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">MAAY DEVELOPERS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="bi bi-list text-white fs-2"></i> <!-- Bootstrap Menu Icon -->
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html" data-translate="home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html" data-translate="about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="portfolio.html" data-translate="portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="faq.html" data-translate="faq">FAQ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html" data-translate="contact">Contact</a></li>
+                    </ul>
+                    <button id="languageToggle" class="custom-btn">عربي</button>
+                </div>
+            </div>
+        </nav>
+    
+    
+    <!-- About Us -->
+    <section id="about">
+        <h2 data-translate="aboutTitle">About Us</h2>
+        <p data-translate="aboutText">Welcome to MAAY Developer, a passionate and skilled team of web development professionals specializing in creating dynamic, user-friendly, and high-performance websites. 
+            Our team is a blend of Frontend Developers and Backend Developers with expertise in PHP, working together to deliver seamless digital experiences.
+            With years of experience in the industry, we pride ourselves on crafting visually stunning and functionally robust websites. Our Frontend Team focuses on creating responsive, intuitive, and engaging user interfaces, ensuring that every visitor enjoys a smooth and interactive experience. 
+            Meanwhile, our Backend Team, powered by PHP, builds the backbone of your website, ensuring it is secure, scalable, and optimized for performance.
+            At MAAY Developer, we believe in the power of collaboration and innovation. Whether you need a simple landing page or a complex web application, we are dedicated to turning your vision into reality. Our commitment to quality, attention to detail, and passion for technology set us apart in the world of web development.
+            Let us help you bring your ideas to life. 
+            Together, we can build something extraordinary.
+        </p>
+        
+        <span id="aboutSpan" data-translate="aboutTagline">MAAY Developer Where Creativity Meets Technology.</span>
+    </section>
+    
+    
+    <!-- Cards -->
+    <section class="team">
+        <h2 data-translate="teamTitle">Our Team</h2>
+        <div class="container">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card_border">
+                    <img src="images/mina.jpg" alt="Mina Ramsis" class="card_img">
+                </div>
+                <h3 class="Card_Name">Mina Ramsis</h3>
+                <span class="card_Field">Front-end Developer</span>
+        
+                <div class="card_social">
+                    <div class="card_social_control">
+                        <div class="card_social_button">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <span class="card_social_text">To Connect</span>
+        
+                        <ul class="social">
+                            <a href="https://www.linkedin.com/in/mina-ramsis-562a04312/" class="Social_link" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/minaramsis19" class="Social_link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card_border">
+                    <img src="images/bebo.jpg" alt="Abdelrhamn Ashraf" class="card_img">
+                </div>
+                <h3 class="Card_Name">Abdelrhamn Ashraf</h3>
+                <span class="card_Field">Back-end Developer</span>
+        
+                <div class="card_social">
+                    <div class="card_social_control">
+                        <div class="card_social_button">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <span class="card_social_text">To Connect</span>
+        
+                        <ul class="social">
+                            <a href="https://www.linkedin.com/in/abdelrahman-ashraf-hassan-ali-53644223b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="Social_link" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/mo3gza91892123" class="Social_link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <div class="card_border">
+                    <img src="images/yehia.jpg" alt="Yahia Mohemd" class="card_img">
+                </div>
+                <h3 class="Card_Name">Yahia Mohammed</h3>
+                <span class="card_Field">UI/UX Designer</span>
+        
+                <div class="card_social">
+                    <div class="card_social_control">
+                        <div class="card_social_button">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <span class="card_social_text">To Connect</span>
+        
+                        <ul class="social">
+                            <a href="www.linkedin.com/in/yahia-mohammed-me" class="Social_link" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/YahiaMo5" class="Social_link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Card 4 -->
+            <div class="card">
+                <div class="card_border">
+                    <img src="Images/rikaby.jpg" alt="Abdelrhman Rikaby" class="card_img">
+                </div>
+                <h3 class="Card_Name">Abdelrhman Rikaby</h3>
+                <span class="card_Field">Project Manager</span>
+        
+                <div class="card_social">
+                    <div class="card_social_control">
+                        <div class="card_social_button">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                        <span class="card_social_text">To Connect</span>
+        
+                        <ul class="social">
+                            <a href="https://www.linkedin.com/in/abdelrahman-rikabi-9b90a7262/" class="Social_link" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://github.com/Abdulrhman937" class="Social_link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            
+        </div>
+    </section>
+    
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <!-- Section 1: Company Name and Tagline -->
+            <div>
+                <h3>MAAY DEVELOPERS</h3>
+                <p data-translate="footerTagline">We build the future of the web</p>
+            </div>
+    
+            <!-- Section 2: Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://www.facebook.com/share/1ATW4Fcn1s/" class="me-3"><i class="bi bi-facebook"></i></a>
+                <a href="https://github.com/MAAY4" class="me-3"><i class="bi bi-github"></i></a>
+                <a href="www.linkedin.com/in/maay-developers-job" class="me-3"><i class="bi bi-linkedin"></i></a>
+            </div>
+    
+            <!-- Section 3: Copyright -->
+            <div>
+                <p data-translate="copyright">All rights reserved For © MAAY Developer 2025</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ====================== كائن الترجمات ====================== //
+    const translations = {
+        en: {
+        // ------ القائمة العلوية ------ //
+        brand: "MAAY DEVELOPERS",
+        home: "Home",
+        about: "About",
+        portfolio: "Portfolio",
+        faq: "FAQ",
+        contact: "Contact",
+        // ------ قسم من نحن ------ //
+        aboutTitle: "About Us",
+        aboutText: "Welcome to MAAY Developer, a passionate and skilled team of web development professionals specializing in creating dynamic, user-friendly, and high-performance websites. Our team is a blend of Frontend Developers and Backend Developers with expertise in PHP, working together to deliver seamless digital experiences. With years of experience in the industry, we pride ourselves on crafting visually stunning and functionally robust websites. Our Frontend Team focuses on creating responsive, intuitive, and engaging user interfaces, ensuring that every visitor enjoys a smooth and interactive experience. Meanwhile, our Backend Team, powered by PHP, builds the backbone of your website, ensuring it is secure, scalable, and optimized for performance. At MAAY Developer, we believe in the power of collaboration and innovation. Whether you need a simple landing page or a complex web application, we are dedicated to turning your vision into reality. Our commitment to quality, attention to detail, and passion for technology set us apart in the world of web development. Let us help you bring your ideas to life. Together, we can build something extraordinary.",
+        aboutTagline: "MAAY Developer - Where Creativity Meets Technology",
+        // ------ قسم فريقنا ------ //
+        teamTitle: "Our Team",
+        // ------ قسم الفوتر ------ //
+        footerTagline: "We build the future of the web",
+        copyright: "All rights reserved For © MAAY Developer 2025",
+        // ------ الخطوط ------ //
+        fonts: {
+            logo: "'Oswald', sans-serif",
+            sectionTitle: "'Oswald', sans-serif",
+            aboutSpan: "'Changa', sans-serif",
+            teamCard: "'Oswald', sans-serif",
+            paragraph: "'Oswald', sans-serif",
+            footer: "'Oswald', sans-serif"
+        },
+        textStyles: {
+            aboutSpanSize: "20px",
+            aboutSpanWeight: "700"
+        }
+        },
+        ar: {
+        // ------ القائمة العلوية ------ //
+        brand: "ماي ديفيلوبرز",
+        home: "الرئيسية",
+        about: "من نحن",
+        portfolio: "أعمالنا",
+        faq: "الأسئلة الشائعة",
+        contact: "اتصل بنا",
+        // ------ قسم من نحن ------ //
+        aboutTitle: "من نحن",
+        aboutText: "مرحبًا بكم في MAAY Developer، فريق شغوف ومحترف في تطوير الويب، متخصص في إنشاء مواقع ديناميكية وسهلة الاستخدام وعالية الأداء. فريقنا هو مزيج من مطوِّري الواجهات الأمامية ومطوِّري الواجهات الخلفية، يتمتعون بخبرة واسعة في لغة PHP، يعملون معًا لتحقيق تجارب رقمية سلسة. بسنوات من الخبرة في المجال، نفتخر بصنع مواقع ويب مذهلة بصريًا وقوية وظيفيًا. يركز فريق الواجهات الأمامية على تصميم واجهات مستخدم تفاعلية وجذابة تتكيف مع جميع الأجهزة، بينما يبني فريق الواجهات الخلفية (المُدعَم بـ PHP) الهيكل الأساسي لموقعك، ليضمن أمانه وقابليته للتوسعة وتحسين أدائه. في MAAY Developer، نؤمن بقوة التعاون والابتكار. سواء كنت تحتاج إلى صفحة هبوط بسيطة أو تطبيق ويب معقد، فنحن ملتزمون بتحويل رؤيتك إلى واقع. تميّزنا يكمن في التزامنا بالجودة، والاهتمام بأدق التفاصيل، وشغفنا الدائم بالتكنولوجيا في عالم تطوير الويب. دعنا نساعدك في إحياء أفكارك. معًا، نستطيع بناء شيءٍ استثنائي.",
+        aboutTagline: "MAAY Developer حيث يلتقي الإبداع بالتكنولوجيا",
+        // ------ قسم فريقنا ------ //
+        teamTitle: "فريقنا",
+        // ------ قسم الفوتر ------ //
+        footerTagline: "نحن نبني مستقبل الويب",
+        copyright: "All rights reserved For © MAAY Developer 2025",
+        // ------ الخطوط ------ //
+        fonts: {
+            logo: "'Oswald', sans-serif",
+            sectionTitle: "'Oswald', sans-serif",
+            aboutSpan: "'Changa', sans-serif",
+            teamCard: "'Oswald', sans-serif",
+            paragraph: "'Oswald', sans-serif",
+            footer: "'Oswald', sans-serif"
+        },
+        textStyles: {
+            aboutSpanSize: "20px",
+            aboutSpanWeight: "700"
+        }
+        }
+    };
+    
+    // ====================== المتغيرات العامة ====================== //
+    let currentLang = localStorage.getItem('lang') || 'en';
+    const langToggle = document.getElementById('languageToggle');
+    
+    // ====================== ضبط حجم الخط الديناميكي ====================== //
+    function adjustAboutTextStyles() {
+        const aboutText = document.querySelector('#about p');
+        if (currentLang === 'ar') {
+            const screenWidth = window.innerWidth;
+    
+        // Define font sizes and spacing based on screen width
+        let fontSize, wordSpacing, letterSpacing;
+        if (screenWidth < 360) { // Very small screens (e.g., older phones)
+            fontSize = '14px';
+            wordSpacing = '2px';
+            letterSpacing = '0.1px';
+        } else if (screenWidth < 576) { // Small screens (phones)
+            fontSize = '16px';
+            wordSpacing = '2px';
+            letterSpacing = '0.1px';
+        } else if (screenWidth < 768) { // Medium screens (tablets)
+            fontSize = '18px';
+            wordSpacing = '2px';
+            letterSpacing = '0.1px';
+        } else if (screenWidth < 992) { // Large screens (laptops)
+            fontSize = '20px';
+            wordSpacing = '3px';
+            letterSpacing = '0.1px';
+        } else { // Extra large screens (desktops)
+            fontSize = '24px';
+            wordSpacing = '4px';
+            letterSpacing = '0.1px';
+        }
+    
+        // Apply the calculated styles to the about text
+        aboutText.style.fontSize = fontSize;
+        aboutText.style.wordSpacing = wordSpacing;
+        aboutText.style.letterSpacing = letterSpacing;
+    }
+    }
+    
+    // Call the function initially and on window resize
+    window.addEventListener('resize', adjustAboutTextStyles);
+    adjustAboutTextStyles(); // Initial call
+    
+    // ====================== الدوال الأساسية ====================== //
+    function applyFontStyles() {
+        const styleConfig = {
+            'h2, footer h3': {
+                fontFamily: translations[currentLang].fonts.sectionTitle
+            },
+            '.navbar-brand': {
+                fontFamily: translations[currentLang].fonts.logo,
+                fontSize: currentLang === 'ar' ? '1.5rem' : '1.5rem'
+            },
+            '#about p': {
+                fontFamily: translations[currentLang].fonts.paragraph
+            },
+            '#about span': {
+                fontFamily: translations[currentLang].fonts.aboutSpan,
+                fontSize: translations[currentLang].textStyles.aboutSpanSize,
+                fontWeight: translations[currentLang].textStyles.aboutSpanWeight
+            },
+            '.Card_Name, .card_Field': {
+                fontFamily: translations[currentLang].fonts.teamCard,
+                fontSize: '1.2rem'
+            },
+            'footer p': {
+                fontFamily: translations[currentLang].fonts.footer
+            }
+        };
+        Object.entries(styleConfig).forEach(([selector, styles]) => {
+            document.querySelectorAll(selector).forEach(el => {
+                Object.assign(el.style, styles);
+            });
+        });
+    }
+    
+    function updateContent() {
+        document.body.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+        document.querySelectorAll('[data-translate]').forEach(el => {
+            const key = el.getAttribute('data-translate');
+            el.textContent = translations[currentLang][key];
+        });
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.direction = 'ltr';
+            card.style.textAlign = 'center';
+        });
+        applyFontStyles();
+        langToggle.textContent = currentLang === 'en' ? 'عربي' : 'English';
+    }
+    
+    // ====================== الأحداث ====================== //
+    langToggle.addEventListener('click', () => {
+        currentLang = currentLang === 'en' ? 'ar' : 'en';
+        localStorage.setItem('lang', currentLang);
+        updateContent();
+    });
+    
+    document.addEventListener('DOMContentLoaded', () => {
+        const fontLink = document.createElement('link');
+        fontLink.href = 'https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Bungee+Spice&family=Oswald:wght@200;300;400;500;600;700&display=swap';
+        fontLink.rel = 'stylesheet';
+        document.head.appendChild(fontLink);
+        updateContent();
+    });
+    
+    document.querySelectorAll('.card_social_button').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const socialCard = e.currentTarget.closest('.card').querySelector('.card_social');
+            const isOpen = socialCard.classList.contains('animation');
+            if (isOpen) {
+                socialCard.classList.add('down-animation');
+                setTimeout(() => {
+                    socialCard.classList.remove('animation', 'down-animation');
+                }, 1000);
+            } else {
+                socialCard.classList.remove('down-animation');
+                socialCard.classList.add('animation');
+            }
+        });
+    });
+    
+    
+    // Select the progress bar element
+    let indicator = document.querySelector(".Indicator");
+    
+    // Function to update the progress bar
+    function updateProgressBar() {
+        // Get the total height of the document and the viewport height
+        let documentHeight = document.documentElement.scrollHeight;
+        let viewportHeight = window.innerHeight;
+    
+        // Get the current scroll position
+        let scrollY = window.scrollY;
+    
+        // Handle cases where the page is shorter than the viewport
+        if (documentHeight <= viewportHeight) {
+            indicator.style.width = "100%";
+            return;
+        }
+    
+        // Calculate the scrollable area (adjust for mobile devices)
+        let scrollableArea = documentHeight - viewportHeight;
+    
+        // Fix for iOS devices that add extra padding at the bottom
+        if (navigator.platform.indexOf("iPhone") != -1 || navigator.platform.indexOf("iPad") != -1) {
+            scrollableArea -= 20; // Adjust for iOS bounce effect
+        }
+    
+        // Calculate the percentage scrolled
+        let percentageScrolled = (scrollY / scrollableArea) * 100;
+    
+        // Ensure the percentage does not exceed 100%
+        if (percentageScrolled > 100) {
+            percentageScrolled = 100;
+        }
+    
+        // Update the width of the progress bar
+        indicator.style.width = percentageScrolled + "%";
+    }
+    
+    // Update the progress bar on scroll
+    window.addEventListener("scroll", updateProgressBar);
+    
+    // Call the function initially to set the correct width
+    updateProgressBar();
+    
+    // Optional: Adjust for orientation changes on mobile devices
+    window.addEventListener("resize", () => {
+        setTimeout(updateProgressBar, 100); // Delay to ensure accurate calculations
+    });
+    </script>
+</body>
+</html>

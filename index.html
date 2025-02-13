@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAAY DEVELOPERS</title>
+    <meta name="description" content="MAAY DEVELOPERS provides expert web development, UI/UX design, and SEO optimization to build high-quality websites.">
+    <meta name="keywords" content="Web Development, UI/UX Design, SEO, Website Optimization, Coding">
+    <meta property="og:title" content="MAAY DEVELOPERS">
+    <meta name="author" content="MAAY DEVELOPERS Team">
+    <meta property="og:description" content="We build high-quality, responsive websites with top-notch design and SEO optimization.">
+    <meta property="og:url" content="https://yourwebsite.com/">
+    <link rel="icon" type="image/png" href="images/maay2.jpg">
+    <script src="js/script.js"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body {
+            scrollbar-width: thin;
+            scrollbar-color: #ff5722 #1e1e1e;
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1e1e1e; 
+            border-radius: 5px; 
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #ff5722;
+            border-radius: 5px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: #e64a19;
+        }
+
+        .Indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 5px;
+            background-color: #ff5722; 
+            z-index: 9999;
+            transition: width 0.3s ease-in-out;
+            display: block !important;
+            opacity: 1 !important;
+            padding-bottom: 10px;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: black; /* Solid black navbar */
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ff5722 !important;
+            animation: shine 2s infinite alternate;
+        }
+
+        @keyframes shine {
+            from {
+                text-shadow: 0 0 5px #ff5722, 0 0 10px #ff8a50;
+            }
+            to {
+                text-shadow: 0 0 10px #ff5722, 0 0 20px #ff8a50;
+            }
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #ff5722 !important;
+        }
+
+        .custom-btn {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+    
+        .custom-btn:hover {
+            background-color: #e64a19; /* Darker shade on hover */
+        }
+        /* Hero Section */
+        @keyframes fadeSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        h1 {
+            animation: fadeSlideUp 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .service-card {
+            animation: fadeIn 0.5s ease forwards;
+        }
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(255, 165, 0, 0.4);
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .team-section .card {
+            animation: slideIn 0.5s ease forwards;
+        }
+
+        .hero {
+            position: relative;
+            height: 90vh;
+            background: url('images/maay.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 10px auto;
+        }
+
+        .btn-custom {
+            background-color: #ff5722;
+            border: none;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            transition: 0.3s;
+            color: white;
+            border-radius: 5px;
+        }
+
+        .btn-custom:hover {
+            background-color: #e64a19;
+        }
+
+        /* About Section */
+            .card {
+                transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            }
+            
+            .card:hover {
+                transform: translateY(-10px) scale(1.05);
+                box-shadow: 0 10px 20px rgba(255, 165, 0, 0.4);
+            }
+        .team-section {
+            background-color: black;
+            padding: 50px 0;
+        }
+        
+        .team-img {
+            width: 100%;
+            height: 200px; /* Fixed height */
+            object-fit: cover; /* Ensures images fit without distortion */
+            border-top-left-radius: 5px; 
+            border-top-right-radius: 5px;
+        }
+        
+        .card {
+            border: 2px solid #ff5722; /* Orange border */
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 80px 0;
+            background: black; /* Background Color */
+            text-align: center;
+            color: white; /* Text Color */
+        }
+
+        .services-section h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ff5722; /* Heading Color */
+            margin-bottom: 20px;
+        }
+
+        .services-section p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+
+        /* Service Card */
+        .service-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+            cursor: pointer;
+            border: 2px solid transparent;
+            color: white;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: #ff5722;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .service-card i {
+            font-size: 3rem;
+            color: #ff5722; /* Icon Color */
+            margin-bottom: 15px;
+        }
+
+        .service-card h4 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+        }
+
+        /* Custom CSS for the footer */
+        footer {
+            background-color: black;
+            color: white;
+            padding: 30px 0;
+        }
+        footer h3 {
+            color: #ff5722;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: #ff5722;
+        }
+        .social-icons i {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            color: #ff5722; /* Set icon color to #ff5722 */
+        }
+        .social-icons i:hover {
+            color: white; /* Change color to white on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Brogress Bar -->
+    <div class="Indicator"></div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">MAAY DEVELOPERS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="bi bi-list text-white fs-2"></i> <!-- Bootstrap Menu Icon -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+                <button id="languageToggle" class="custom-btn">عربي</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>We Build Creative & Modern Websites</h1>
+            <p>Professional web development team specializing in stunning designs and functional websites.</p>
+            <a href="#services" class="btn btn-custom"><i class="bi bi-arrow-down-circle"></i> Explore Our Services</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="team-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-4" style="color: #ff5722;">Meet Our Team</h2>
+            <div class="row justify-content-center">
+        
+                <!-- Team Member 1 -->
+                <div class="col-md-3">
+                    <div class="card text-center bg-dark text-white">
+                        <img src="images/mina.jpg" class="card-img-top team-img" alt="Mina Ramsis">
+                        <div class="card-body">
+                            <h5 class="card-title">Mina Ramsis</h5>
+                            <p class="card-text">Front-End Developer</p>
+                            <div>
+                                <a href="https://www.linkedin.com/in/mina-ramsis-562a04312/" class="btn btn-outline-light"><i class="bi bi-linkedin"></i></a>
+                                <a href="https://github.com/minaramsis19" class="btn btn-outline-light"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Team Member 2 -->
+                <div class="col-md-3">
+                    <div class="card text-center bg-dark text-white">
+                        <img src="images/bebo.jpg" class="card-img-top team-img" alt="Abdelrahman Ashraf">
+                        <div class="card-body">
+                            <h5 class="card-title">Abdelrahman Ashraf</h5>
+                            <p class="card-text">Back-End Developer</p>
+                            <div>
+                                <a href="https://www.linkedin.com/in/abdelrahman-ashraf-hassan-ali-53644223b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn btn-outline-light"><i class="bi bi-linkedin"></i></a>
+                                <a href="https://github.com/mo3gza91892123" class="btn btn-outline-light"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Team Member 3 -->
+                <div class="col-md-3">
+                    <div class="card text-center bg-dark text-white">
+                        <img src="images/yehia.jpg" class="card-img-top team-img" alt="Yehia Mohamed">
+                        <div class="card-body">
+                            <h5 class="card-title">Yehia Mohamed</h5>
+                            <p class="card-text">UI/UX Designer</p>
+                            <div>
+                                <a href="https://www.linkedin.com/in/yahia-mohammed-me" class="btn btn-outline-light"><i class="bi bi-linkedin"></i></a>
+                                <a href="https://github.com/YahiaMo5" class="btn btn-outline-light"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Team Member 4 -->
+                <div class="col-md-3">
+                    <div class="card text-center bg-dark text-white">
+                        <img src="images/rikaby.jpg" class="card-img-top team-img" alt="Abdelrahman Rikaby">
+                        <div class="card-body">
+                            <h5 class="card-title">Abdelrahman Rikaby</h5>
+                            <p class="card-text">Project Manager</p>
+                            <div>
+                                <a href="https://www.linkedin.com/in/abdelrahman-rikabi-9b90a7262/" class="btn btn-outline-light"><i class="bi bi-linkedin"></i></a>
+                                <a href="https://github.com/Abdulrhman937" class="btn btn-outline-light"><i class="bi bi-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <p>We provide a wide range of web development services to help businesses establish a strong online presence.</p>
+
+            <div class="row">
+                <!-- Service 1: Web Design -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <i class="bi bi-palette"></i>
+                        <h4>Web Design</h4>
+                        <p>Creating visually appealing and user-friendly website designs tailored to your brand.</p>
+                    </div>
+                </div>
+
+                <!-- Service 2: Front-End Development -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <i class="bi bi-code-slash"></i>
+                        <h4>Front-End Development</h4>
+                        <p>Building responsive, interactive, and high-performance web interfaces.</p>
+                    </div>
+                </div>
+
+                <!-- Service 3: Back-End Development -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <i class="bi bi-database"></i>
+                        <h4>Back-End Development</h4>
+                        <p>Developing secure and scalable server-side applications for seamless functionality.</p>
+                    </div>
+                </div>
+
+                <!-- Service 4: E-Commerce Solutions -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <i class="bi bi-cart"></i>
+                        <h4>E-Commerce Solutions</h4>
+                        <p>Designing and developing online stores to enhance sales and customer engagement.</p>
+                    </div>
+                </div>
+
+                <!-- Service 5: SEO Optimization -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <i class="bi bi-graph-up"></i>
+                        <h4>SEO Optimization</h4>
+                        <p>Improving your website’s visibility on search engines to drive organic traffic.</p>
+                    </div>
+                </div>
+
+                <!-- Service 6: Website Maintenance -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="service-card">
+                        <i class="bi bi-tools"></i>
+                        <h4>Website Maintenance</h4>
+                        <p>Providing regular updates, security patches, and performance enhancements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h3>MAAY DEVELOPERS</h3>
+                    <p>We build the future of the web</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center social-icons">
+                    <a href="https://www.facebook.com/share/1ATW4Fcn1s/" class="me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="https://github.com/MAAY4" class="me-3"><i class="bi bi-github"></i></a>
+                    <a href="www.linkedin.com/in/maay-developers-job" class="me-3"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center mt-3">
+                    <p>&copy; 2025 MAAY DEVELOPERS. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Select the progress bar element
+        let indicator = document.querySelector(".Indicator");
+
+        // Function to update the progress bar
+        function updateProgressBar() {
+        // Get the total height of the document and the viewport height
+        let documentHeight = document.documentElement.scrollHeight;
+        let viewportHeight = window.innerHeight;
+
+        // Get the current scroll position
+        let scrollY = window.scrollY;
+
+        // Handle cases where the page is shorter than the viewport
+        if (documentHeight <= viewportHeight) {
+            indicator.style.width = "100%";
+            return;
+        }
+
+        // Calculate the scrollable area (adjust for mobile devices)
+        let scrollableArea = documentHeight - viewportHeight;
+
+        // Fix for iOS devices that add extra padding at the bottom
+        if (navigator.platform.indexOf("iPhone") != -1 || navigator.platform.indexOf("iPad") != -1) {
+            scrollableArea -= 20; // Adjust for iOS bounce effect
+        }
+
+        // Calculate the percentage scrolled
+        let percentageScrolled = (scrollY / scrollableArea) * 100;
+
+        // Ensure the percentage does not exceed 100%
+        if (percentageScrolled > 100) {
+            percentageScrolled = 100;
+        }
+
+        // Update the width of the progress bar
+        indicator.style.width = percentageScrolled + "%";
+    }
+
+        // Update the progress bar on scroll
+        window.addEventListener("scroll", updateProgressBar);
+
+        // Call the function initially to set the correct width
+        updateProgressBar();
+
+        // Optional: Adjust for orientation changes on mobile devices
+        window.addEventListener("resize", () => {
+            setTimeout(updateProgressBar, 100); // Delay to ensure accurate calculations
+        });
+
+            // تعريف النصوص لكل لغة
+            const languages = {
+                en: {
+                    home: "Home",
+                    about: "About Us",
+                    portfolio: "Portfolio",
+                    faq: "FAQ",
+                    contact: "Contact Us",
+                    heroTitle: "We Build Creative & Modern Websites",
+                    heroText: "Professional web development team specializing in stunning designs and functional websites.",
+                    explore: "Explore Our Services",
+                    teamTitle: "Meet Our Team",
+                    servicesTitle: "Our Services",
+                    servicesText: "We provide a wide range of web development services to help businesses establish a strong online presence.",
+                    footer: "We build the future of the web",
+                    copyRight: "© 2025 MAAY DEVELOPERS. All rights reserved.",
+                    
+                    // أعضاء الفريق
+                    teamMembers: [
+                        { name: "Mina Ramsis", role: "Front-End Developer" },
+                        { name: "Abdelrahman Ashraf", role: "Back-End Developer" },
+                        { name: "Yehia Mohamed", role: "UI/UX Designer" },
+                        { name: "Abdelrahman Rikaby", role: "Project Manager" }
+                    ],
+        
+                    // الخدمات
+                    services: [
+                        { title: "Web Design", desc: "Creating visually appealing and user-friendly website designs tailored to your brand." },
+                        { title: "Front-End Development", desc: "Building responsive, interactive, and high-performance web interfaces." },
+                        { title: "Back-End Development", desc: "Developing secure and scalable server-side applications for seamless functionality." },
+                        { title: "E-Commerce Solutions", desc: "Designing and developing online stores to enhance sales and customer engagement." },
+                        { title: "SEO Optimization", desc: "Improving your website’s visibility on search engines to drive organic traffic." },
+                        { title: "Website Maintenance", desc: "Providing regular updates, security patches, and performance enhancements." }
+                    ]
+                },
+        
+                ar: {
+                    home: "الرئيسية",
+                    about: "من نحن",
+                    portfolio: "معرض الأعمال",
+                    faq: "الأسئلة الشائعة",
+                    contact: "اتصل بنا",
+                    heroTitle: "نحن نبني مواقع إلكترونية إبداعية وحديثة",
+                    heroText: "فريق تطوير مواقع احترافي متخصص في تصميمات مذهلة ومواقع وظيفية.",
+                    explore: "استكشف خدماتنا",
+                    teamTitle: "تعرف على فريقنا",
+                    servicesTitle: "خدماتنا",
+                    servicesText: "نحن نقدم مجموعة واسعة من خدمات تطوير الويب لمساعدة الشركات في تعزيز وجودها على الإنترنت.",
+                    footer: "نحن نبني مستقبل الويب",
+                    copyRight: "© 2025 MAAY DEVELOPERS. جميع الحقوق محفوظة.",
+        
+                    // أعضاء الفريق
+                    teamMembers: [
+                        { name: "مينا رامسيس", role: "مطوّر واجهات أمامية" },
+                        { name: "عبدالرحمن أشرف", role: "مطوّر خلفيات" },
+                        { name: "يحيى محمد", role: "مصمم UI/UX" },
+                        { name: "عبدالرحمن ركابي", role: "مدير المشروع" }
+                    ],
+        
+                    // الخدمات
+                    services: [
+                        { title: "تصميم الويب", desc: "إنشاء تصميمات مواقع جذابة وسهلة الاستخدام تتناسب مع علامتك التجارية." },
+                        { title: "تطوير الواجهات الأمامية", desc: "بناء واجهات ويب تفاعلية ومتجاوبة وعالية الأداء." },
+                        { title: "تطوير الخلفيات", desc: "تطوير تطبيقات خوادم آمنة وقابلة للتطوير لتوفير وظائف سلسة." },
+                        { title: "حلول التجارة الإلكترونية", desc: "تصميم وتطوير المتاجر الإلكترونية لتعزيز المبيعات وتفاعل العملاء." },
+                        { title: "تحسين محركات البحث (SEO)", desc: "تحسين ظهور موقعك على محركات البحث لزيادة حركة المرور العضوية." },
+                        { title: "صيانة المواقع", desc: "تقديم تحديثات دورية، وتصحيحات أمنية، وتحسينات في الأداء." }
+                    ]
+                }
+            };
+        
+            // متغير لتحديد اللغة الحالية
+            let currentLang = "en";
+        
+            // زر تبديل اللغة
+            const languageToggle = document.getElementById("languageToggle");
+        
+            // تغيير اللغة عند النقر على الزر
+            languageToggle.addEventListener("click", function () {
+                currentLang = currentLang === "en" ? "ar" : "en";
+                
+                // تغيير نصوص القائمة
+                document.querySelector('.nav-link[href="index.html"]').textContent = languages[currentLang].home;
+                document.querySelector('.nav-link[href="about.html"]').textContent = languages[currentLang].about;
+                document.querySelector('.nav-link[href="portfolio.html"]').textContent = languages[currentLang].portfolio;
+                document.querySelector('.nav-link[href="faq.html"]').textContent = languages[currentLang].faq;
+                document.querySelector('.nav-link[href="contact.html"]').textContent = languages[currentLang].contact;
+        
+                // تغيير محتوى الـ Hero Section
+                document.querySelector(".hero-content h1").textContent = languages[currentLang].heroTitle;
+                document.querySelector(".hero-content p").textContent = languages[currentLang].heroText;
+                document.querySelector(".btn-custom").textContent = languages[currentLang].explore;
+        
+                // تغيير العنوان الرئيسي للفريق والخدمات
+                document.querySelector(".team-section h2").textContent = languages[currentLang].teamTitle;
+                document.querySelector(".services-section h2").textContent = languages[currentLang].servicesTitle;
+                document.querySelector(".services-section p").textContent = languages[currentLang].servicesText;
+        
+                // تغيير أعضاء الفريق
+                const teamCards = document.querySelectorAll(".team-section .card");
+                teamCards.forEach((card, index) => {
+                    card.querySelector(".card-title").textContent = languages[currentLang].teamMembers[index].name;
+                    card.querySelector(".card-text").textContent = languages[currentLang].teamMembers[index].role;
+                });
+        
+                // تغيير الخدمات
+                const serviceCards = document.querySelectorAll(".services-section .service-card");
+                serviceCards.forEach((card, index) => {
+                    card.querySelector("h4").textContent = languages[currentLang].services[index].title;
+                    card.querySelector("p").textContent = languages[currentLang].services[index].desc;
+                });
+        
+                // تغيير الفوتر
+                document.querySelector("footer h3").textContent = "MAAY DEVELOPERS";
+                document.querySelector("footer p").textContent = languages[currentLang].footer;
+                document.querySelector("footer .mt-3 p").textContent = languages[currentLang].copyRight;
+        
+                // تغيير نص زر اللغة
+                languageToggle.textContent = currentLang === "en" ? "عربي" : "English";
+        
+                // تغيير اتجاه النص إذا كانت اللغة عربية
+                document.body.dir = currentLang === "ar" ? "rtl" : "ltr";
+            });
+        
+        
+    </script>
+</body>
+</html>
